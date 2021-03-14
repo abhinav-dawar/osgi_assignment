@@ -18,28 +18,28 @@ public @interface Configuration {
     )
     int passing_marks() default 50;
 
-    @AttributeDefinition(
-            name = "Student ID",
-            type = AttributeType.INTEGER
-    )
-    int student_id() default 1;
-
-    @AttributeDefinition(
-            name = "Student name",
-            type = AttributeType.STRING
-    )
-    String student_name() default "Abhinav";
-
-    @AttributeDefinition(
-            name = "Student marks",
-            type = AttributeType.INTEGER
-    )
-    int student_marks() default 70;
-
-    @AttributeDefinition(
-            name = "Student age",
-            type = AttributeType.INTEGER
-    )
-    int student_age() default 25;
+//    @AttributeDefinition(
+//            name = "Student ID",
+//            type = AttributeType.INTEGER
+//    )
+//    int student_id() default 1;
+//
+//    @AttributeDefinition(
+//            name = "Student name",
+//            type = AttributeType.STRING
+//    )
+//    String student_name() default "Abhinav";
+//
+//    @AttributeDefinition(
+//            name = "Student marks",
+//            type = AttributeType.INTEGER
+//    )
+//    int student_marks() default 70;
+//
+//    @AttributeDefinition(
+//            name = "Student age",
+//            type = AttributeType.INTEGER
+//    )
+//    int student_age() default 25;
 
 }

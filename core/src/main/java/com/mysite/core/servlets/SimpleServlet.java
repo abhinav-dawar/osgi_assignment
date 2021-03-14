@@ -20,6 +20,7 @@ import java.io.IOException;
 import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 
+import com.mysite.core.services.Student;
 import com.mysite.core.services.StudentClassService;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
@@ -38,13 +39,22 @@ public class SimpleServlet extends SlingSafeMethodsServlet {
 
     @Reference
     private ConfigurationService configurationService;
+
+    @Reference
     private StudentClassService studentClassService;
+
+    @Override
+    public void init() throws ServletException {
+        studentClassService.addStudent(new Student(1, "Abhinav", 91, 23));
+        studentClassService.addStudent(new Student(2, "Dawar", 92, 24));
+    }
 
     @Override
     protected void doGet(final SlingHttpServletRequest req,
                          final SlingHttpServletResponse resp) throws ServletException, IOException {
+
+
         resp.getWriter().write("Ab run hogaaa: " + configurationService.getPassingMarks());
-        //resp.getWriter().write("This is second question " + studentClassService.addStudent(1, "Abhinav", 90, 23));
-        //resp.getWriter().write("Again " + studentClassService.getAllStudents());
+        resp.getWriter().write("Again " + studentClassService.getAllStudents());
     }
 }

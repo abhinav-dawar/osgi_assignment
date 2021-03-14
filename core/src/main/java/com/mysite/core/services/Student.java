@@ -12,4 +12,11 @@ public class Student {
         this.marks_obtained = marks_obtained;
         this.age = age;
     }
+    public int getId() {
+        return id;
+    }
+
+    public int getMarks() {
+        return marks_obtained;
+    }
 }
